@@ -25,7 +25,11 @@ for file in Path(args.path_to_input).glob('*.json'):                     # Find 
     with open(args.path_to_output, 'a+') as csvfile:                     # Open the existing file and write the data
         writer = csv.DictWriter(csvfile, fieldnames=field_names)
         writer.writerow(data)
-csvfile.close()
 
+try:
+    csvfile.close()
+    print('done!')
+except NameError:
+    print('done!')
 
 
