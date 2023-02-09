@@ -30,6 +30,6 @@ try:
     csvfile.close()
     print('done!')
 except NameError:
-    print('done!')
+    print("NameError: the file wasn't open properly")
 
 
